@@ -338,23 +338,23 @@ Now you can launch using the ``ros2 launch`` command.
 
 .. tabs::
 
-  .. group-tab:: YAML
-
-    .. code-block:: console
-
-        $ ros2 launch launch_tutorial example_main.launch.yaml
-
   .. group-tab:: XML
 
     .. code-block:: console
 
         $ ros2 launch launch_tutorial example_main_launch.xml
 
+  .. group-tab:: YAML
+
+    .. code-block:: console
+
+        $ ros2 launch launch_tutorial example_substitutions_launch.yaml
+
   .. group-tab:: Python
 
     .. code-block:: console
 
-        $ ros2 launch launch_tutorial example_main.launch.py
+        $ ros2 launch launch_tutorial example_substitutions_launch.py
 
 This will do the following:
 
@@ -368,15 +368,6 @@ Modifying launch arguments
 
 .. tabs::
 
-  .. group-tab:: YAML
-
-    If you want to change the provided launch arguments, you can either update the ``background_r`` variable in the ``example_main.launch.yaml`` or launch the ``example_substitutions.launch.yaml`` with preferred arguments.
-    To see arguments that may be given to the launch file, run the following command:
-
-    .. code-block:: console
-
-        $ ros2 launch launch_tutorial example_substitutions.launch.yaml --show-args
-
   .. group-tab:: XML
 
     If you want to change the provided launch arguments, you can either update the ``background_r`` variable in the ``example_main_launch.xml`` or launch the ``example_substitutions_launch.xml`` with preferred arguments.
@@ -385,6 +376,15 @@ Modifying launch arguments
     .. code-block:: console
 
         $ ros2 launch launch_tutorial example_substitutions_launch.xml --show-args
+
+  .. group-tab:: YAML
+
+    If you want to change the provided launch arguments, you can either update the ``background_r`` variable in the ``example_main.launch.yaml`` or launch the ``example_substitutions.launch.yaml`` with preferred arguments.
+    To see arguments that may be given to the launch file, run the following command:
+
+    .. code-block:: console
+
+        $ ros2 launch launch_tutorial example_substitutions.launch.yaml --show-args
 
   .. group-tab:: Python
 
@@ -417,17 +417,17 @@ Now you can pass the desired arguments to the launch file as follows:
 
 .. tabs::
 
-  .. group-tab:: YAML
-
-    .. code-block:: console
-
-        $ ros2 launch launch_tutorial example_substitutions.launch.yaml turtlesim_ns:='turtlesim3' use_provided_red:='True' new_background_r:=200
-
   .. group-tab:: XML
 
     .. code-block:: console
 
         $ ros2 launch launch_tutorial example_substitutions_launch.xml turtlesim_ns:='turtlesim3' use_provided_red:='True' new_background_r:=200
+
+  .. group-tab:: YAML
+
+    .. code-block:: console
+
+        $ ros2 launch launch_tutorial example_substitutions.launch.yaml turtlesim_ns:='turtlesim3' use_provided_red:='True' new_background_r:=200
 
   .. group-tab:: Python
 
